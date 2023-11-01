@@ -1,4 +1,4 @@
-#Initialize passwords notebook with placeholder info
+# Initialize passwords dictionary with placeholder info
 notebook = { 
     'Websites': {
         'amazon.com':{ 
@@ -15,8 +15,8 @@ notebook = {
         }
 
 while True:
-    #Continously print the notebook
-    print('\nCurrent credentials in notebook:')
+    # Continously print the dictionary
+    print('\nCurrent credentials in notebook:\n')
     for cat, name in notebook.items():
         print(f'---Category: {cat}---')
         for key, value in name.items():
@@ -24,7 +24,7 @@ while True:
             for user, passw in value.items():
                 print(f'   -{user}: {passw}')
 
-    #Print the menu and ask for input
+    # Print the menu and ask for input
     print('Menu: \n1. Add New Entry \n2. Remove Entry \n3. Add New Category \n4. Remove Category \n5. Exit')
     
     choice = input('Enter your choice: ')
@@ -32,7 +32,7 @@ while True:
     if choice == '1':
         # Add new entry
         category = input('Enter the category (e.g., Websites, Emails): ')
-        #Check if category is already present
+        # Check if category exists
         if category in notebook:
              site = input('Enter the name of the website or service: ')
              username = input('Enter the username: ')
@@ -42,3 +42,46 @@ while True:
              print('New entry added successfully.')
         else:
              print(f'Category {category} not found')
+             
+    elif choice == '2':
+        # Remove entry
+        category = input('Enter the category of the entry you want to remove: ')
+        # Check if category exists
+        if category in notebook:
+            site = input('Enter the name of the entry you want to remove: ')
+            if site in notebook[category]:
+                del notebook[category][site]
+                print(f'Entry in category {category} removed successfully.')
+        else:
+            print(f'Category {category} not found.')
+            
+    elif choice == '3':
+        # Add Category
+        category = input('Enter the new category (e.g., Websites, Emails): ')
+        # Check if category exists
+        if category in notebook:
+            print(f'Category {category} exists already')
+
+        else:
+            # Add the new category to the dictionary, with blank keys and values
+            notebook[category] = {}
+            notebook[category]['empty'] = {'empty':'empty'} 
+            print('New category added successfully.')
+
+    elif choice == '4':
+        # Remove Category
+        category = input('Enter the category you want to remove: ')
+        # Check if category exists
+        if category in notebook:
+                del notebook[category]
+                print(f'Entry in category {category} removed successfully.')
+        else:
+            print(f'Category {category} not found.')
+
+    elif choice == '5':
+        # Exit the program
+        print('Exiting program...')
+        break
+    
+    else:
+        print("Invalid choice. Please try again.")
