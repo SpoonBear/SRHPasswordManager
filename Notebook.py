@@ -35,11 +35,14 @@ while True:
         # Check if category exists
         if category in book:
              site = input('Enter the name of the website or service: ')
-             username = input('Enter the username: ')
-             password = input('Enter the password: ')
-             # Add the new entry to the dictionary
-             book[category][site] = {'Username': username, 'Password': password}
-             print('New entry added successfully.')
+             if site not in book[category]:
+                 username = input('Enter the username: ')
+                 password = input('Enter the password: ')
+                 # Add the new entry to the dictionary
+                 book[category][site] = {'Username': username, 'Password': password}
+                 print('New entry added successfully.')
+             else:
+                  print('Entry exists already')
         else:
              print(f'Category {category} not found')
              
