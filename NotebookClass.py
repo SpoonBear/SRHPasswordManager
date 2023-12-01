@@ -1,5 +1,9 @@
 import json
 from cryptography.fernet import Fernet
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+import base64
 
 class Notebook:
     def __init__(self, book) -> None:
@@ -17,7 +21,7 @@ class Notebook:
                 for user, passw in value.items():
                     print(f'   -{user}: {passw}')
 
-    def ADD_ENTRY(self):
+    def add_entry(self):
         # Add new entry
         category = input('Enter the category of the new entry (e.g., Websites, Emails): ')
         # Check if category exists
@@ -35,8 +39,8 @@ class Notebook:
         else:
              print(f'Category {category} not found')
 
-    def ADD_CATEGORY(self):
-         # Add Category
+    def add_category(self):
+        # Add Category
         category = input('Enter the new category (e.g., Websites, Emails): ')
         # Check if category exists
         if category in self.book:
@@ -47,7 +51,7 @@ class Notebook:
             self.book[category]['empty'] = {'empty':'empty'} 
             print(f'Category {category} added successfully.')
 
-    def REMOVE_ENTRY(self):
+    def remote_entry(self):
         # Remove entry
         category = input('Enter the category of the entry you want to remove: ')
         # Check if category exists
@@ -61,7 +65,7 @@ class Notebook:
         else:
             print(f'Category {category} not found.')
 
-    def REMOVE_CATEGORY(self):
+    def remove_category(self):
         # Remove Category
         category = input('Enter the category you want to remove: ')
         # Check if category exists
@@ -71,31 +75,65 @@ class Notebook:
         else:
             print(f'Category {category} not found.')
 
-    def GENERATE_KEY(self,input)
-        #Ask the user to generate a secure password for the Password Notebook
+    def check_for_file(self):
         pass
 
-    def ENCRYPT_AND_WRITE(self,dict,key):
-        # Convert dictionary to string, insert "Success" flag at the beginning and encrypt with user's key
+    @staticmethod
+    def GENERATE_KEY():
+        #Ask the user to enter a secure password for the Notebook
+        password = input('Please enter the password')
+        # Salt the password to avoid rainbow tables, ideally it should be different each time
+        salt = b'salt_123' 
+        # Derive cryptographic key from the user password
+        kdf = PBKDF2HMAC(
+        algorithm=hashes.SHA256(),
+        iterations=100000,
+        salt=salt,
+        length=32
+        )
+        key = base64.urlsafe_b64encode(kdf.derive(password.encode()))
+        return key
+
+    def ENCRYPT_AND_WRITE(self,dict):
+        # Convert dictionary to JSON string, insert "Success" flag at the beginning and encrypt with user's key
         # Convert dictionary to JSON
         json_string = json.dumps(dict)
+        # We need a flag to know when we have inputed the correct password for the Notebook
+        # To achieve this, concatenate 'success' to the beginning of the JSON string
+        json_string = 'success' + json_string
         # Encrypt the JSON
+        key = Notebook.GENERATE_KEY()
         cipher_suite = Fernet(key)
         encrypted_data = cipher_suite.encrypt(json_string.encode())
         # Write encrypted data to file
-        with open('Notebook.srh', 'wb') as file:
+        with open('Notebook.txt', 'wb') as file:
             file.write(encrypted_data)
-        # Clear the data in the encrypted_data variable
+        # Clear the data in the encrypted_data variable, for security reasons
         encrypted_data = b''
 
-        pass
-
-    def DECRYPT_AND_LOAD(self):
-        # Decrypt with user's key, check for "Success" flag and convert string to dictionary
-        pass
-
-
-    
+    def LOAD_AND_DECRYPT(self,key):
+        # Decrypt with user's key, check for "Success" flag and convert JSON string to dictionary
+        # Read the encrypted data from the file
+        with open('Notebook.txt', 'rb') as file:
+            encrypted_data = file.read()
+        # The encryption key provided by the user
+        cipher_suite = Fernet(key)
+        # Decrypt the data
+        decrypted_data = cipher_suite.decrypt(encrypted_data)
+        # Convert the decrypted data to a string
+        json_string = decrypted_data.decode()
+        # Check if the 'success' string is present
+        if json_string.startswith('success'):
+            # Remove the 'success' string
+            json_string = json_string[len('success'):]
+            # Convert the JSON string to a dictionary
+            result_dict = json.loads(json_string)
+            # Return the dictionary
+            return result_dict
+        # Else exit
+        else:
+            print('Incorrect password, please try again')
+        
 nb1 = Notebook({ 
     'Websites': {
         'amazon.com':{ 
