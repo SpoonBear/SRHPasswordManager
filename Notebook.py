@@ -1,5 +1,5 @@
 # Initialize passwords dictionary with placeholder info
-notebook = { 
+book = { 
     'Websites': {
         'amazon.com':{ 
         'Username': 'johndoe',
@@ -17,7 +17,7 @@ notebook = {
 while True:
     # Continously print the dictionary
     print('\nCurrent credentials in notebook:\n')
-    for cat, name in notebook.items():
+    for cat, name in book.items():
         print(f'---Category: {cat}---')
         for key, value in name.items():
             print(f' --{key}--')
@@ -33,13 +33,16 @@ while True:
         # Add new entry
         category = input('Enter the category (e.g., Websites, Emails): ')
         # Check if category exists
-        if category in notebook:
+        if category in book:
              site = input('Enter the name of the website or service: ')
-             username = input('Enter the username: ')
-             password = input('Enter the password: ')
-             # Add the new entry to the dictionary
-             notebook[category][site] = {'Username': username, 'Password': password}
-             print('New entry added successfully.')
+             if site not in book[category]:
+                 username = input('Enter the username: ')
+                 password = input('Enter the password: ')
+                 # Add the new entry to the dictionary
+                 book[category][site] = {'Username': username, 'Password': password}
+                 print('New entry added successfully.')
+             else:
+                  print('Entry exists already')
         else:
              print(f'Category {category} not found')
              
@@ -47,10 +50,10 @@ while True:
         # Remove entry
         category = input('Enter the category of the entry you want to remove: ')
         # Check if category exists
-        if category in notebook:
+        if category in book:
             site = input('Enter the name of the entry you want to remove: ')
-            if site in notebook[category]:
-                del notebook[category][site]
+            if site in book[category]:
+                del book[category][site]
                 print(f'Entry in category {category} removed successfully.')
         else:
             print(f'Category {category} not found.')
@@ -59,21 +62,21 @@ while True:
         # Add Category
         category = input('Enter the new category (e.g., Websites, Emails): ')
         # Check if category exists
-        if category in notebook:
+        if category in book:
             print(f'Category {category} exists already')
 
         else:
             # Add the new category to the dictionary, with blank keys and values
-            notebook[category] = {}
-            notebook[category]['empty'] = {'empty':'empty'} 
+            book[category] = {}
+            book[category]['empty'] = {'empty':'empty'} 
             print('New category added successfully.')
 
     elif choice == '4':
         # Remove Category
         category = input('Enter the category you want to remove: ')
         # Check if category exists
-        if category in notebook:
-                del notebook[category]
+        if category in book:
+                del book[category]
                 print(f'Entry in category {category} removed successfully.')
         else:
             print(f'Category {category} not found.')
