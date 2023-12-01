@@ -79,7 +79,7 @@ class Notebook:
         pass
 
     @staticmethod
-    def GENERATE_KEY():
+    def generate_key():
         #Ask the user to enter a secure password for the Notebook
         password = input('Please enter the password')
         # Salt the password to avoid rainbow tables, ideally it should be different each time
@@ -94,7 +94,7 @@ class Notebook:
         key = base64.urlsafe_b64encode(kdf.derive(password.encode()))
         return key
 
-    def ENCRYPT_AND_WRITE(self,dict):
+    def encrypt_and_write(self,dict):
         # Convert dictionary to JSON string, insert "Success" flag at the beginning and encrypt with user's key
         # Convert dictionary to JSON
         json_string = json.dumps(dict)
@@ -102,7 +102,7 @@ class Notebook:
         # To achieve this, concatenate 'success' to the beginning of the JSON string
         json_string = 'success' + json_string
         # Encrypt the JSON
-        key = Notebook.GENERATE_KEY()
+        key = Notebook.generate_key()
         cipher_suite = Fernet(key)
         encrypted_data = cipher_suite.encrypt(json_string.encode())
         # Write encrypted data to file
@@ -111,7 +111,7 @@ class Notebook:
         # Clear the data in the encrypted_data variable, for security reasons
         encrypted_data = b''
 
-    def LOAD_AND_DECRYPT(self,key):
+    def load_and_encrypt(self,key):
         # Decrypt with user's key, check for "Success" flag and convert JSON string to dictionary
         # Read the encrypted data from the file
         with open('Notebook.txt', 'rb') as file:
