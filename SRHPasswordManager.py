@@ -1,9 +1,9 @@
 import json
-from cryptography.fernet import Fernet
-from cryptography.hazmat.backends import default_backend
+from cryptography.fernet import Fernet, InvalidToken
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import base64
+import os
 
 class Notebook:
     def __init__(self, book) -> None:
@@ -13,6 +13,7 @@ class Notebook:
         return f'{self.book}'
 
     def print_book(self):
+        # Iterate through the dictionary to print it
         print('\nCurrent credentials in notebook:\n')
         for categ, name in self.book.items():
             print(f'---Category: {categ}---')
@@ -76,12 +77,19 @@ class Notebook:
             print(f'Category {category} not found.')
 
     def check_for_file(self):
-        pass
+        # Check if the 'Notebook.txt' file exists in the current directory
+        file_path = 'Notebook.txt'
+        if os.path.exists(file_path):
+            print(f'The file {file_path} exists.')
+            return 1
+        else:
+            print(f'The file {file_path} does not exist.') 
+            return 0           
 
     @staticmethod
     def generate_key():
-        #Ask the user to enter a secure password for the Notebook
-        password = input('Please enter the password')
+        # Ask the user to enter a secure password for the Notebook
+        password = input('Please enter the master password\n')
         # Salt the password to avoid rainbow tables, ideally it should be different each time
         salt = b'salt_123' 
         # Derive cryptographic key from the user password
@@ -94,15 +102,11 @@ class Notebook:
         key = base64.urlsafe_b64encode(kdf.derive(password.encode()))
         return key
 
-    def encrypt_and_write(self,dict):
-        # Convert dictionary to JSON string, insert "Success" flag at the beginning and encrypt with user's key
+    def encrypt_and_write(self, key):
+        # Convert dictionary to JSON string and encrypt with user's key
         # Convert dictionary to JSON
-        json_string = json.dumps(dict)
-        # We need a flag to know when we have inputed the correct password for the Notebook
-        # To achieve this, concatenate 'success' to the beginning of the JSON string
-        json_string = 'success' + json_string
+        json_string = json.dumps(self.book)
         # Encrypt the JSON
-        key = Notebook.generate_key()
         cipher_suite = Fernet(key)
         encrypted_data = cipher_suite.encrypt(json_string.encode())
         # Write encrypted data to file
@@ -111,28 +115,25 @@ class Notebook:
         # Clear the data in the encrypted_data variable, for security reasons
         encrypted_data = b''
 
-    def load_and_encrypt(self,key):
+    def load_and_decrypt(self,key):
         # Decrypt with user's key, check for "Success" flag and convert JSON string to dictionary
         # Read the encrypted data from the file
         with open('Notebook.txt', 'rb') as file:
             encrypted_data = file.read()
         # The encryption key provided by the user
         cipher_suite = Fernet(key)
-        # Decrypt the data
-        decrypted_data = cipher_suite.decrypt(encrypted_data)
-        # Convert the decrypted data to a string
-        json_string = decrypted_data.decode()
-        # Check if the 'success' string is present
-        if json_string.startswith('success'):
-            # Remove the 'success' string
-            json_string = json_string[len('success'):]
+        try:
+            # Decrypt the data
+            decrypted_data = cipher_suite.decrypt(encrypted_data)
+            # Convert the decrypted data to a string
+            json_string = decrypted_data.decode()
             # Convert the JSON string to a dictionary
             result_dict = json.loads(json_string)
-            # Return the dictionary
             return result_dict
-        # Else exit
-        else:
+        except InvalidToken:
             print('Incorrect password, please try again')
+            return None
+            
         
 nb1 = Notebook({ 
     'Websites': {
@@ -150,6 +151,72 @@ nb1 = Notebook({
         }
 )
 
-nb1.print_book()
-nb1.ADD_ENTRY()
-nb1.print_book()
+print('Welcome to the Passwords Notebook\nChecking for an existing Notebook')
+# Check for existing Notebook.txt file containing the passwords
+notebook_exists = nb1.check_for_file()
+if notebook_exists == 1:
+    # Ask user for the master password password, key will be used for decryption and encryption
+    key = nb1.generate_key()
+    # Load file, decrypt using key and load contents into the object
+    if nb1.load_and_decrypt(key) is not None:
+        nb1 = Notebook(nb1.load_and_decrypt(key))
+        # Continously print the dictionary and show the menu
+        while True:
+            # Print the dictionary
+            nb1.print_book()
+            # Show the menu
+            print('Menu: \n1. Add New Entry \n2. Remove Entry \n3. Add New Category \n4. Remove Category \n5. Save Notebook \n6. Change master password \n0. Exit')
+            choice = input('Enter your choice: ')
+            if choice == '1':
+                nb1.add_entry()
+            elif choice == '2':
+                nb1.remote_entry()
+            elif choice == '3':
+                nb1.add_category()
+            elif choice == '4':
+                nb1.remove_category()
+            elif choice == '5':
+                nb1.encrypt_and_write(key)
+            elif choice == '6':
+                print('Changes will be saved\n')
+                key = nb1.generate_key()
+                nb1.encrypt_and_write(key)
+            elif choice == '0':
+                # Exit the program
+                # Wipe the key for security reasons
+                key = b''
+                print('Exiting program...')
+                break
+            else:
+                print("Invalid choice. Please try again.")
+else:
+    # File was not found, create one or exit
+    print('Notebook.txt was not found\n Please choose:\n 1. Create a new Notebook\n 2. Exit')
+    choice = input('Enter your choice: ')
+    if choice == '1':
+        # Create new Notebook.txt file with mock data
+        print('Creating new Notebook')
+        nb1 = Notebook({ 
+        'Websites': {
+            'amazon.com':{ 
+            'Username': 'johndoe',
+            'Password':'pass123'
+            }
+            },
+            'Emails': {
+                'gmail': { 
+                'Username': 'johndoe@gmail.com',
+                'Password':'pass321'
+                }
+                }
+            }
+        )
+        # Ask for the password for the new Notebook
+        nb1.encrypt_and_write(nb1.generate_key())
+        print('New Notebook has been created')
+    elif choice == '2':
+        #Exit program
+        print('Exiting program...')
+    else:
+        print("Invalid choice. Please try again.")
+
