@@ -26,6 +26,11 @@ Activity Diagram for an user adding a new category to the Notebook
 
 ![Activity Diagram 1](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/29200315-103a-4f29-9c54-b6502908a761)
 
+Activity Diagram for an user requesting to check if their credentials have been leaked
+
+![Activity Diagram 2](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/8793f615-ccb4-4acf-8f90-6dc52ef4d662)
+
+
 ## 3. Requirements Engineering
 
 >Describe your project or any project (e.g. one related to your work or a private project) neatly using the methods of Requirements Engineering by mapping some requirements in 2 tools (!).To do this, use the most important description attributes from the script! Approximately 5-10 requirements per tool should be sufficient. Two variants should be provided = tools. A 'self-made' version and a professional = possibly commercial version, i.e. with 2 tools! Examples of 'self-made' variants: Airtable, notion.so, Trello, etc. Examples of commercial tools: Monday, Jira, Doors, ObjectIF, Xebrio, etc. (see Miro). Instead of the professional version, you can also build a tool yourself.
