@@ -15,7 +15,8 @@ This project aims to develop a Password Manager using Python for the Software De
 
 >Use and understand Git! Play with Branches and undo/revert things = go back in time!
 
-|TODO|
+&rarr; [See commit history for main](https://github.com/SpoonBear/SRHPasswordManager/commits/main)
+&rarr; [See commit history for dev](https://github.com/SpoonBear/SRHPasswordManager/commits/dev)
 
 ## 2. UML 
 
