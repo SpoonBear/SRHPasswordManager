@@ -30,6 +30,10 @@ Activity Diagram for an user requesting to check if their credentials have been 
 
 ![Activity Diagram 2](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/8793f615-ccb4-4acf-8f90-6dc52ef4d662)
 
+Class Diagram for Notebook
+
+![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/1c4b843f-e1e7-420e-88c5-1b5803f1d45a)
+
 
 ## 3. Requirements Engineering
 
