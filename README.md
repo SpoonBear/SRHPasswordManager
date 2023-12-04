@@ -34,6 +34,10 @@ Class Diagram for Notebook
 
 ![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/1c4b843f-e1e7-420e-88c5-1b5803f1d45a)
 
+Use-Case Diagram
+
+![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/78493e7b-916a-45e4-a178-5016a528fe98)
+
 
 ## 3. Requirements Engineering
 
