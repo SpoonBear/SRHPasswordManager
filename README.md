@@ -22,6 +22,7 @@ This project aims to develop a Password Manager using Python for the Software De
 
 >UML at least 3 good different big diagrams. "good" means you can pump it up artificially as written in DDD. You have 10 million $ from me! Please export the pics. I can not install all the tools to view them! Perfect would be 1) one dynamic diagram like an activity diagranm 2) one or two static diagrams as component, class or deployment and if needed a use-case diagram.
 
+Activity Diagram for an user adding a new category to the Notebook
 ![Activity Diagram 1](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/29200315-103a-4f29-9c54-b6502908a761)
 
 ## 3. Requirements Engineering
