@@ -16,6 +16,7 @@ This project aims to develop a Password Manager using Python for the Software De
 >Use and understand Git! Play with Branches and undo/revert things = go back in time!
 
 &rarr; [See commit history for main](https://github.com/SpoonBear/SRHPasswordManager/commits/main)
+
 &rarr; [See commit history for dev](https://github.com/SpoonBear/SRHPasswordManager/commits/dev)
 
 ## 2. UML 
@@ -85,9 +86,18 @@ Use-Case Diagram
 
 >Use a good IDE and get fluent with it: e.g. IntelliJ. What are your favourite key shortcuts?!
 
-### CHOSEN IDE: [VISUAL STUDIO COMMUNITY 2022](https://visualstudio.microsoft.com/vs/community/)
+CHOSEN IDE: [VISUAL STUDIO COMMUNITY 2022](https://visualstudio.microsoft.com/vs/community/)
 
-|TODO|
+Most used shortcuts:
+-Ctrl+F to find methods and variables
+-Ctrl+H to replace
+-F2 for renaming
+-F8 and Shift+F8 to toggle between problems
+
+Extensions used:
+-Pylance, for more efficient coding
+-GitHub Pull Requests and Issued, for integration with GitHub
+
 
 ## 11. Functional Programming
 >prove that you have covered all functional aspects in your code as:
