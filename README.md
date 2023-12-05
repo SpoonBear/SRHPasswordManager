@@ -89,15 +89,17 @@ Use-Case Diagram
 CHOSEN IDE: [VISUAL STUDIO CODE](https://code.visualstudio.com/)
 
 Most used shortcuts:
--```Ctrl+X,Y,Z``` for cutting, copying and pasting
+
+- ```Ctrl+X,Y,Z``` for cutting, copying and pasting
 - ```Ctrl+F``` to find methods and variables
--```Ctrl+H``` to replace
--```F2``` for renaming
--```F8``` and Shift+F8 to toggle between problems
+- ```Ctrl+H``` to replace
+- ```F2``` for renaming
+- ```F8``` and Shift+F8 to toggle between problems
 
 Extensions used:
--```Pylance``` for more efficient coding
--```GitHub``` Pull Requests and Issued, for integration with GitHub
+
+- ```Pylance``` for more efficient coding
+- ```GitHub``` Pull Requests and Issued, for integration with GitHub
 
 
 ## 11. Functional Programming
