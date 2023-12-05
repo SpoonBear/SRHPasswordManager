@@ -16,13 +16,29 @@ This project aims to develop a Password Manager using Python for the Software De
 >Use and understand Git! Play with Branches and undo/revert things = go back in time!
 
 &rarr; [See commit history for main](https://github.com/SpoonBear/SRHPasswordManager/commits/main)
+
 &rarr; [See commit history for dev](https://github.com/SpoonBear/SRHPasswordManager/commits/dev)
 
 ## 2. UML 
 
 >UML at least 3 good different big diagrams. "good" means you can pump it up artificially as written in DDD. You have 10 million $ from me! Please export the pics. I can not install all the tools to view them! Perfect would be 1) one dynamic diagram like an activity diagranm 2) one or two static diagrams as component, class or deployment and if needed a use-case diagram.
 
-|TODO|
+Activity Diagram for an user adding a new category to the Notebook
+
+![Activity Diagram 1](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/29200315-103a-4f29-9c54-b6502908a761)
+
+Activity Diagram for an user requesting to check if their credentials have been leaked
+
+![Activity Diagram 2](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/8793f615-ccb4-4acf-8f90-6dc52ef4d662)
+
+Class Diagram for Notebook
+
+![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Class%20Diagram.png)
+
+Use-Case Diagram
+
+![Use Case Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Use%20Case%20Diagram.png)
+
 
 ## 3. Requirements Engineering
 
@@ -70,9 +86,20 @@ This project aims to develop a Password Manager using Python for the Software De
 
 >Use a good IDE and get fluent with it: e.g. IntelliJ. What are your favourite key shortcuts?!
 
-### CHOSEN IDE: [VISUAL STUDIO COMMUNITY 2022](https://visualstudio.microsoft.com/vs/community/)
+CHOSEN IDE: [VISUAL STUDIO CODE](https://code.visualstudio.com/)
 
-|TODO|
+Most used shortcuts:
+
+- ```Ctrl+X,Y,Z``` for cutting, copying and pasting
+- ```Ctrl+F``` to find methods and variables
+- ```Ctrl+H``` to replace
+- ```F2``` for renaming
+- ```F8``` and Shift+F8 to toggle between problems
+
+Extensions used:
+
+- ```Pylance``` for more efficient coding
+- ```GitHub``` Pull Requests and Issued, for integration with GitHub
 
 ## 11. Functional Programming
 >prove that you have covered all functional aspects in your code as:
