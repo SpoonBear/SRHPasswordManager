@@ -1,0 +1,14 @@
+@startuml
+|User|
+start
+:Enter the new category;
+|Notebook|
+if (Category exists?) then (yes)
+  :Category exists already;
+  stop
+else (no)
+  :Add the new category to the dictionary;
+  :Category added successfully;
+endif
+stop
+@enduml
