@@ -86,17 +86,18 @@ Use-Case Diagram
 
 >Use a good IDE and get fluent with it: e.g. IntelliJ. What are your favourite key shortcuts?!
 
-CHOSEN IDE: [VISUAL STUDIO COMMUNITY 2022](https://visualstudio.microsoft.com/vs/community/)
+CHOSEN IDE: [VISUAL STUDIO CODE](https://code.visualstudio.com/)
 
 Most used shortcuts:
--Ctrl+F to find methods and variables
--Ctrl+H to replace
--F2 for renaming
--F8 and Shift+F8 to toggle between problems
+-```Ctrl+X,Y,Z``` for cutting, copying and pasting
+- ```Ctrl+F``` to find methods and variables
+-```Ctrl+H``` to replace
+-```F2``` for renaming
+-```F8``` and Shift+F8 to toggle between problems
 
 Extensions used:
--Pylance, for more efficient coding
--GitHub Pull Requests and Issued, for integration with GitHub
+-```Pylance``` for more efficient coding
+-```GitHub``` Pull Requests and Issued, for integration with GitHub
 
 
 ## 11. Functional Programming
