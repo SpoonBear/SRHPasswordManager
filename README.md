@@ -33,11 +33,11 @@ Activity Diagram for an user requesting to check if their credentials have been 
 
 Class Diagram for Notebook
 
-![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/1c4b843f-e1e7-420e-88c5-1b5803f1d45a)
+![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Class%20Diagram.png)
 
 Use-Case Diagram
 
-![Use Case Diagram](https://github.com/SpoonBear/SRHPasswordManager/assets/148366878/c4098e63-4bba-4e7b-a987-caac72752566)
+![Use Case Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Use%20Case%20Diagram.png)
 
 
 ## 3. Requirements Engineering
