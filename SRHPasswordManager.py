@@ -5,6 +5,48 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import base64
 import os
 
+class User:
+    # Hypothetical user class to expand the domains of the project
+    def __init__(self, ID, username, password,sub_status) -> None:
+        self.ID = ID
+        self.username = username
+        self.passowrd = password
+        self.sub_status = sub_status
+
+    def login(self):
+        # Hypothetical method to expand the domains of the project
+        # Logs into user account
+        pass
+
+    def subscribe(self):
+        # Hypothetical method to expand the domains of the project
+        # Enables subscription so the user can access premium features, like
+        # SSO and Check for Leaks
+        pass
+    
+class Services:
+    # Hypothetical user class to expand the domains of the project
+    def __init__(self,sso_status,backup_recovery_status,subscription_status) -> None:
+        self.sso_status = sso_status
+        self.backup_recovery_status = backup_recovery_status
+        self.subscription_status = subscription_status
+
+    def sso_service(self):
+        # Hypothetical method to expand the domains of the project
+        # Service providing Single Sign On to users.
+        pass
+
+    def subscription_service(self):
+        # Hypothetical method to expand the domains of the project
+        # Service that manages the subscription of status of the users so they can access premium features, like
+        # SSO and Check for Leaks
+        pass
+    
+    def backup_recovery_service(self):
+        # Hypothetical method to expand the domains of the project
+        # Service that manages cloud saves and backups of the credentials
+        pass
+
 class Notebook:
     def __init__(self, book) -> None:
         self.book = book
@@ -133,23 +175,36 @@ class Notebook:
         except InvalidToken:
             print('Incorrect password, please try again')
             return None
-            
         
-nb1 = Notebook({ 
-    'Websites': {
-        'amazon.com':{ 
-        'Username': 'johndoe',
-        'Password':'pass123'
-        }
-        },
-        'Emails': {
-            'gmail': { 
-            'Username': 'johndoe@gmail.com',
-            'Password':'pass321'
-            }
-            }
-        }
-)
+    def check_for_leaks(self):
+        # Hypothetical method to expand the domains of the project
+        # Sends storaged usernames/emails to the HaveIBeenPwned API and a security operations team,
+        # where they will be checked for leaks in the clear and dark web. A report will be emailed to the user
+        pass
+    
+    def generate_passphrase(self):
+        # Hypothetical method to expand the domains of the project
+        # Generates a secure and easy to remeber passphrase, e.g. 'PhoneSnowNickelPolish'
+        pass
+
+    def password_strength_analysis(self):
+        # Hypothetical method to expand the domains of the project
+        # Analyses the stored passwords and reports the strength,
+        # such as usage of lowercase, uppercase, numbers, special characters and length
+        pass
+
+    def cloud_backup_and_recovery(self):
+        # Hypothetical method to expand the domains of the project
+        # Manages cloud saves and backups of the credentials
+        pass
+
+    def ui_ux(self):
+        # Hypothetical method to expand the domains of the project
+        # Should display a functioning and intuitive GUI
+        pass
+
+
+nb1 = Notebook({})
 
 print('Welcome to the Passwords Notebook\nChecking for an existing Notebook')
 # Check for existing Notebook.txt file containing the passwords
