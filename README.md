@@ -101,7 +101,6 @@ Extensions used:
 - ```Pylance``` for more efficient coding
 - ```GitHub``` Pull Requests and Issued, for integration with GitHub
 
-
 ## 11. Functional Programming
 >prove that you have covered all functional aspects in your code as:
 >- only final data structures
