@@ -44,7 +44,15 @@ Use-Case Diagram
 
 >Describe your project or any project (e.g. one related to your work or a private project) neatly using the methods of Requirements Engineering by mapping some requirements in 2 tools (!).To do this, use the most important description attributes from the script! Approximately 5-10 requirements per tool should be sufficient. Two variants should be provided = tools. A 'self-made' version and a professional = possibly commercial version, i.e. with 2 tools! Examples of 'self-made' variants: Airtable, notion.so, Trello, etc. Examples of commercial tools: Monday, Jira, Doors, ObjectIF, Xebrio, etc. (see Miro). Instead of the professional version, you can also build a tool yourself.
 
-|TODO|
+Notion Overview
+
+![Notion Overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Requirement%20Engineering/Notion%20Overview.png)
+
+Jira Overview
+
+![Notion Overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Requirement%20Engineering/Jira%20Overview.png)
+
+&rarr; [See full requirements and details](https://github.com/SpoonBear/SRHPasswordManager/tree/dev/Resources/Requirement%20Engineering)
 
 ## 4. Analysis
 
@@ -58,15 +66,15 @@ Use-Case Diagram
 
 Event Storming
 
-![Event Storming](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Event%20Storming.png)
+![Event Storming](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/DDD/Event%20Storming.png)
 
 Core Domains Chart
 
-![Core Domains Chart](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Core%20Domains%20Chart.png)
+![Core Domains Chart](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/DDD/Core%20Domains%20Chart.png)
 
 Domain Relations
 
-![Domain Relations](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Domain%20Relations.png)
+![Domain Relations](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/DDD/Domain%20Relations.png)
 
 ## 6. Metrices
 
