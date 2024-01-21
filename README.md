@@ -11,6 +11,20 @@ This project aims to develop a Password Manager using Python for the Software De
  
 ## FINAL PROJECT SUBMISSION
 
+## Table of Contents
+
+  * [1. Git](#1-git)
+  * [2. UML](#2-uml)
+  * [3. Requirements Engineering](#3-requirements-engineering)
+  * [4. Analysis](#4-analysis)
+  * [5. DDD](#5-ddd)
+  * [6. Metrices](#6-metrices)
+  * [7. Clean Code Dev](#7-clean-code-dev)
+  * [8. Build](#8-build)
+  * [9. UnitTests](#9-unittests)
+  * [10. IDE](#10-ide)
+  * [11. Functional Programming](#11-functional-programming)
+
 ## 1. Git
 
 >Use and understand Git! Play with Branches and undo/revert things = go back in time!
