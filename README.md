@@ -52,7 +52,7 @@ Jira Overview
 
 ![Notion Overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Requirement%20Engineering/Jira%20Overview.png)
 
-![Link to full requirements and details](https://github.com/SpoonBear/SRHPasswordManager/tree/dev/Resources/Requirement%20Engineering)
+&rarr; [See full requirements and details](https://github.com/SpoonBear/SRHPasswordManager/tree/dev/Resources/Requirement%20Engineering)
 
 ## 4. Analysis
 
