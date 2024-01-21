@@ -62,6 +62,8 @@ Use-Case Diagram
 
 >Metrics at least two. Sonarcube would be great. Other non-trivial metrics are also fine.
 
+SonarCloud
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
@@ -69,6 +71,11 @@ Use-Case Diagram
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
+
+Codacy
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5dc8f8ff2999490aae985cbd444ea91d)](https://app.codacy.com/gh/SpoonBear/SRHPasswordManager/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 
 ## 7. Clean Code Dev
 
