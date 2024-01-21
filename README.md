@@ -33,6 +33,8 @@ This project aims to develop a Password Manager using Python for the Software De
 
 &rarr; [See commit history for dev](https://github.com/SpoonBear/SRHPasswordManager/commits/dev)
 
+![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
+
 ## 2. UML 
 
 >UML at least 3 good different big diagrams. "good" means you can pump it up artificially as written in DDD. You have 10 million $ from me! Please export the pics. I can not install all the tools to view them! Perfect would be 1) one dynamic diagram like an activity diagranm 2) one or two static diagrams as component, class or deployment and if needed a use-case diagram.
