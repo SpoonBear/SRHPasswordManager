@@ -1,0 +1,48 @@
+@startuml
+class User {
+  - ID: int
+  - username: String
+  - password: String
+  - sub_status: boolean
+
+  + User(ID: int, username: String, password: String, sub_status: boolean)
+  + login(): void
+  + subscribe(): void
+}
+
+class Services {
+  - sso_status: boolean
+  - backup_recovery_status: boolean
+  - subscription_status: boolean
+
+  + Services(sso_status: boolean, backup_recovery_status: boolean, subscription_status: boolean)
+  + sso_service(): void
+  + subscription_service(): void
+  + backup_recovery_service(): void
+}
+
+class Notebook {
+  - book: Map<String, Map<String, Map<String, String>>>
+
+  + Notebook(book: Map<String, Map<String, Map<String, String>>>)
+  + __str__(): String
+  + print_book(): void
+  + add_entry(): void
+  + add_category(): void
+  + remote_entry(): void
+  + remove_category(): void
+  + check_for_file(): int
+  + generate_key(): byte[]
+  + encrypt_and_write(key: byte[]): void
+  + load_and_decrypt(key: byte[]): Map<String, Map<String, Map<String, String>>>
+  + check_for_leaks(): void
+  + generate_passphrase(): void
+  + password_strength_analysis(): void
+  + cloud_backup_and_recovery(): void
+  + ui_ux(): void
+}
+
+Notebook "1" *-- "1..*" User
+Notebook "1" --* "1" Services
+
+@enduml
