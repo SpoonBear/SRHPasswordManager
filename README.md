@@ -62,6 +62,7 @@ Use-Case Diagram
 
 >Metrics at least two. Sonarcube would be great. Other non-trivial metrics are also fine.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b79951555801416ab70814de9f3fc7e2)](https://app.codacy.com/gh/SpoonBear/SRHPasswordManager?utm_source=github.com&utm_medium=referral&utm_content=SpoonBear/SRHPasswordManager&utm_campaign=Badge_Grade)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SpoonBear_SRHPasswordManager&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=SpoonBear_SRHPasswordManager)
