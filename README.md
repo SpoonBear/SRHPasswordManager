@@ -53,7 +53,6 @@ Use-Case Diagram
 
 ![Use Case Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Use%20Case%20Diagram.png)
 
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
 
 ## 3. Requirements Engineering
 
@@ -69,8 +68,6 @@ Jira Overview
 
 &rarr; [See full requirements and details](https://github.com/SpoonBear/SRHPasswordManager/tree/dev/Resources/Requirement%20Engineering)
 
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
-
 ## 4. Analysis
 
 >From all the points in the Analysis learning unit, A) come up with your own checklist (on an extra DIN A4 page) with the points that you consider relevant to your project. B. Carry out an analysis of your semester project/your favourite / start-up idea and would like to submit this analysis as part of a large documentary! Write enough about each point to create at least 2 pages. Assume that you will soon have an angel for the start-up chapter. If successful, you would get a lot of “money” to be able to do the design and implement it later. So get your start-up successfully into the race!
@@ -78,8 +75,6 @@ Jira Overview
 &rarr; [Checklist](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Analysis%20A.pdf)
 
 &rarr; [Analysis](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Analysis%20B.pdf)
-
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
 
 ## 5. DDD
 
@@ -96,8 +91,6 @@ Core Domains Chart
 Domain Relations
 
 ![Domain Relations](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/DDD/Domain%20Relations.png)
-
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
 
 ## 6. Metrices
 
@@ -117,7 +110,6 @@ Codacy
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5dc8f8ff2999490aae985cbd444ea91d)](https://app.codacy.com/gh/SpoonBear/SRHPasswordManager/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
 
 ## 7. Clean Code Dev
 
@@ -125,23 +117,17 @@ Codacy
 
 |TODO|
 
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
-
 ## 8. Build
 
 >Build Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could be also disconnected from the project just to learn a build tool!) and CICD
 
 |TODO|
 
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
-
 ## 9. UnitTests
 
 >Integrate some nice unit tests in your Code to be integrated into the Build
 
 |TODO|
-
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
 
 ## 10. IDE
 
@@ -162,8 +148,6 @@ Extensions used:
 - ```Pylance``` for more efficient coding
 - ```GitHub``` Pull Requests and Issued, for integration with GitHub
 
-- ![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
-
 ## 11. Functional Programming
 >prove that you have covered all functional aspects in your code as:
 >- only final data structures
@@ -174,5 +158,3 @@ Extensions used:
 >- You can also do it outside of your project. Even in other languages such as F#, Clojure, Julia, etc.
 
 [TODO]
-
-![Back to the top](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/README.md#table-of-contents)
