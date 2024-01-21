@@ -15,10 +15,10 @@ class User:
 
     def login(self):
         # Hypothetical method to expand the domains of the project
-        # Logs into user account
+        # Logs into user account and notebook
         pass
 
-    def subscribe(self):
+    def subscription(self):
         # Hypothetical method to expand the domains of the project
         # Enables subscription so the user can access premium features, like
         # SSO and Check for Leaks
@@ -269,6 +269,8 @@ else:
         # Ask for the password for the new Notebook
         nb1.encrypt_and_write(nb1.generate_key())
         print('New Notebook has been created')
+        # Wipe the key for security reasons
+        key = b''
     elif choice == '2':
         #Exit program
         print('Exiting program...')
