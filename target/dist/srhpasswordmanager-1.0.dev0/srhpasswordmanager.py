@@ -48,8 +48,8 @@ class Services:
         pass
 
 class Notebook:
-    def __init__(self, book) -> None:
-        self.book = book
+    def __init__(self, book=None) -> None:
+        self.book = book or {}
         
     def __str__(self) -> str:
         return f'{self.book}'
@@ -205,75 +205,76 @@ class Notebook:
 
 
 nb1 = Notebook({})
-
-print('Welcome to the Passwords Notebook\nChecking for an existing Notebook')
-# Check for existing Notebook.txt file containing the passwords
-notebook_exists = nb1.check_for_file()
-if notebook_exists == 1:
-    # Ask user for the master password password, key will be used for decryption and encryption
-    key = nb1.generate_key()
-    # Load file, decrypt using key and load contents into the object
-    if nb1.load_and_decrypt(key) is not None:
-        nb1 = Notebook(nb1.load_and_decrypt(key))
-        # Continously print the dictionary and show the menu
-        while True:
-            # Print the dictionary
-            nb1.print_book()
-            # Show the menu
-            print('Menu: \n1. Add New Entry \n2. Remove Entry \n3. Add New Category \n4. Remove Category \n5. Save Notebook \n6. Change master password \n0. Exit')
-            choice = input('Enter your choice: ')
-            if choice == '1':
-                nb1.add_entry()
-            elif choice == '2':
-                nb1.remote_entry()
-            elif choice == '3':
-                nb1.add_category()
-            elif choice == '4':
-                nb1.remove_category()
-            elif choice == '5':
-                nb1.encrypt_and_write(key)
-            elif choice == '6':
-                print('Changes will be saved\n')
-                key = nb1.generate_key()
-                nb1.encrypt_and_write(key)
-            elif choice == '0':
-                # Exit the program
-                # Wipe the key for security reasons
-                key = b''
-                print('Exiting program...')
-                break
-            else:
-                print("Invalid choice. Please try again.")
-else:
-    # File was not found, create one or exit
-    print('Notebook.txt was not found\n Please choose:\n 1. Create a new Notebook\n 2. Exit')
-    choice = input('Enter your choice: ')
-    if choice == '1':
-        # Create new Notebook.txt file with mock data
-        print('Creating new Notebook')
-        nb1 = Notebook({ 
-        'Websites': {
-            'amazon.com':{ 
-            'Username': 'johndoe',
-            'Password':'pass123'
-            }
-            },
-            'Emails': {
-                'gmail': { 
-                'Username': 'johndoe@gmail.com',
-                'Password':'pass321'
-                }
-                }
-            }
-        )
-        # Ask for the password for the new Notebook
-        nb1.encrypt_and_write(nb1.generate_key())
-        print('New Notebook has been created')
-        # Wipe the key for security reasons
-        key = b''
-    elif choice == '2':
-        #Exit program
-        print('Exiting program...')
+if __name__ == "__main__":
+    
+    print('Welcome to the Passwords Notebook\nChecking for an existing Notebook')
+    # Check for existing Notebook.txt file containing the passwords
+    notebook_exists = nb1.check_for_file()
+    if notebook_exists == 1:
+        # Ask user for the master password password, key will be used for decryption and encryption
+        key = nb1.generate_key()
+        # Load file, decrypt using key and load contents into the object
+        if nb1.load_and_decrypt(key) is not None:
+            nb1 = Notebook(nb1.load_and_decrypt(key))
+            # Continously print the dictionary and show the menu
+            while True:
+                # Print the dictionary
+                nb1.print_book()
+                # Show the menu
+                print('Menu: \n1. Add New Entry \n2. Remove Entry \n3. Add New Category \n4. Remove Category \n5. Save Notebook \n6. Change master password \n0. Exit')
+                choice = input('Enter your choice: ')
+                if choice == '1':
+                    nb1.add_entry()
+                elif choice == '2':
+                    nb1.remote_entry()
+                elif choice == '3':
+                    nb1.add_category()
+                elif choice == '4':
+                    nb1.remove_category()
+                elif choice == '5':
+                    nb1.encrypt_and_write(key)
+                elif choice == '6':
+                    print('Changes will be saved\n')
+                    key = nb1.generate_key()
+                    nb1.encrypt_and_write(key)
+                elif choice == '0':
+                    # Exit the program
+                    # Wipe the key for security reasons
+                    key = b''
+                    print('Exiting program...')
+                    break
+                else:
+                    print("Invalid choice. Please try again.")
     else:
-        print("Invalid choice. Please try again.")
+        # File was not found, create one or exit
+        print('Notebook.txt was not found\n Please choose:\n 1. Create a new Notebook\n 2. Exit')
+        choice = input('Enter your choice: ')
+        if choice == '1':
+            # Create new Notebook.txt file with mock data
+            print('Creating new Notebook')
+            nb1 = Notebook({ 
+            'Websites': {
+                'amazon.com':{ 
+                'Username': 'johndoe',
+                'Password':'pass123'
+                }
+                },
+                'Emails': {
+                    'gmail': { 
+                    'Username': 'johndoe@gmail.com',
+                    'Password':'pass321'
+                    }
+                    }
+                }
+            )
+            # Ask for the password for the new Notebook
+            nb1.encrypt_and_write(nb1.generate_key())
+            print('New Notebook has been created')
+            # Wipe the key for security reasons
+            key = b''
+        elif choice == '2':
+            #Exit program
+            print('Exiting program...')
+        else:
+            print("Invalid choice. Please try again.")
 
