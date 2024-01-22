@@ -11,6 +11,20 @@ This project aims to develop a Password Manager using Python for the Software De
  
 ## FINAL PROJECT SUBMISSION
 
+## Table of Contents
+
+  * [1. Git](#1-git)
+  * [2. UML](#2-uml)
+  * [3. Requirements Engineering](#3-requirements-engineering)
+  * [4. Analysis](#4-analysis)
+  * [5. DDD](#5-ddd)
+  * [6. Metrices](#6-metrices)
+  * [7. Clean Code Dev](#7-clean-code-dev)
+  * [8. Build](#8-build)
+  * [9. UnitTests](#9-unittests)
+  * [10. IDE](#10-ide)
+  * [11. Functional Programming](#11-functional-programming)
+
 ## 1. Git
 
 >Use and understand Git! Play with Branches and undo/revert things = go back in time!
@@ -18,6 +32,8 @@ This project aims to develop a Password Manager using Python for the Software De
 &rarr; [See commit history for main](https://github.com/SpoonBear/SRHPasswordManager/commits/main)
 
 &rarr; [See commit history for dev](https://github.com/SpoonBear/SRHPasswordManager/commits/dev)
+
+[Back to Table of Contents](#table-of-contents)
 
 ## 2. UML 
 
@@ -33,24 +49,39 @@ Activity Diagram for an user requesting to check if their credentials have been 
 
 Class Diagram for Notebook
 
-![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Class%20Diagram.png)
+![Class Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/UML/Class%20Diagram.png)
 
 Use-Case Diagram
 
-![Use Case Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Use%20Case%20Diagram.png)
+![Use Case Diagram](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/UML/Use%20Case%20Diagram.png)
 
+[Back to Table of Contents](#table-of-contents)
 
 ## 3. Requirements Engineering
 
 >Describe your project or any project (e.g. one related to your work or a private project) neatly using the methods of Requirements Engineering by mapping some requirements in 2 tools (!).To do this, use the most important description attributes from the script! Approximately 5-10 requirements per tool should be sufficient. Two variants should be provided = tools. A 'self-made' version and a professional = possibly commercial version, i.e. with 2 tools! Examples of 'self-made' variants: Airtable, notion.so, Trello, etc. Examples of commercial tools: Monday, Jira, Doors, ObjectIF, Xebrio, etc. (see Miro). Instead of the professional version, you can also build a tool yourself.
 
-|TODO|
+Notion Overview
+
+![Notion Overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Requirement%20Engineering/Notion%20Overview.png)
+
+Jira Overview
+
+![Notion Overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Requirement%20Engineering/Jira%20Overview.png)
+
+&rarr; [See full requirements and details](https://github.com/SpoonBear/SRHPasswordManager/tree/dev/Resources/Requirement%20Engineering)
+
+[Back to Table of Contents](#table-of-contents)
 
 ## 4. Analysis
 
 >From all the points in the Analysis learning unit, A) come up with your own checklist (on an extra DIN A4 page) with the points that you consider relevant to your project. B. Carry out an analysis of your semester project/your favourite / start-up idea and would like to submit this analysis as part of a large documentary! Write enough about each point to create at least 2 pages. Assume that you will soon have an angel for the start-up chapter. If successful, you would get a lot of “money” to be able to do the design and implement it later. So get your start-up successfully into the race!
 
-|TODO|
+&rarr; [Checklist](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Analysis%20A.pdf)
+
+&rarr; [Analysis](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Analysis%20B.pdf)
+
+[Back to Table of Contents](#table-of-contents)
 
 ## 5. DDD
 
@@ -58,15 +89,17 @@ Use-Case Diagram
 
 Event Storming
 
-![Event Storming](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Event%20Storming.png)
+![Event Storming](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/DDD/Event%20Storming.png)
 
 Core Domains Chart
 
-![Core Domains Chart](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Core%20Domains%20Chart.png)
+![Core Domains Chart](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/DDD/Core%20Domains%20Chart.png)
 
 Domain Relations
 
-![Domain Relations](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Diagrams/Domain%20Relations.png)
+![Domain Relations](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/DDD/Domain%20Relations.png)
+
+[Back to Table of Contents](#table-of-contents)
 
 ## 6. Metrices
 
@@ -86,6 +119,7 @@ Codacy
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5dc8f8ff2999490aae985cbd444ea91d)](https://app.codacy.com/gh/SpoonBear/SRHPasswordManager/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
+[Back to Table of Contents](#table-of-contents)
 
 ## 7. Clean Code Dev
 
@@ -93,17 +127,23 @@ Codacy
 
 |TODO|
 
+[Back to Table of Contents](#table-of-contents)
+
 ## 8. Build
 
 >Build Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could be also disconnected from the project just to learn a build tool!) and CICD
 
 |TODO|
 
+[Back to Table of Contents](#table-of-contents)
+
 ## 9. UnitTests
 
 >Integrate some nice unit tests in your Code to be integrated into the Build
 
 |TODO|
+
+[Back to Table of Contents](#table-of-contents)
 
 ## 10. IDE
 
@@ -124,6 +164,8 @@ Extensions used:
 - ```Pylance``` for more efficient coding
 - ```GitHub``` Pull Requests and Issued, for integration with GitHub
 
+[Back to Table of Contents](#table-of-contents)
+
 ## 11. Functional Programming
 >prove that you have covered all functional aspects in your code as:
 >- only final data structures
@@ -134,3 +176,5 @@ Extensions used:
 >- You can also do it outside of your project. Even in other languages such as F#, Clojure, Julia, etc.
 
 [TODO]
+
+[Back to Table of Contents](#table-of-contents)
