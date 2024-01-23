@@ -141,7 +141,7 @@ This tool supports different tasks such as coverage analysis, unittests and docu
 
 By installing PyBuilder and creating a build.py file, I described the tasks that would be run and what plugins would be used. 
 
-&rarr; (https://github.com/SpoonBear/SRHPasswordManager/blob/dev/build.py)
+&rarr; [Build Config](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/build.py)
 
 The required coverage is 50% and the methods that are tested are check_for_file(), load_and_decrypt(), encrypt_and_write() and add_entry().
 
@@ -149,7 +149,7 @@ The required coverage is 50% and the methods that are tested are check_for_file(
 
 Also, it generated documentation in html from an .rst file, so that it is ready for pubishing.
 
-&rarr; (https://github.com/SpoonBear/SRHPasswordManager/tree/dev/docs/build/html)
+&rarr; [Generated Docs](https://github.com/SpoonBear/SRHPasswordManager/tree/dev/docs/build/html)
 
 [Back to Table of Contents](#table-of-contents)
 
