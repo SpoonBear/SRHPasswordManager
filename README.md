@@ -159,7 +159,7 @@ Also, it generated documentation in html from an .rst file, so that it is ready 
 
 Using PyBuilder I wrote the tests for the check_for_file(), load_and_decrypt(), encrypt_and_write() and add_entry() methods.
 
-&rarr; (https://github.com/SpoonBear/SRHPasswordManager/blob/dev/src/unittest/python/SRHPasswordManager_tests.py)
+&rarr; [Unittest File](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/src/unittest/python/SRHPasswordManager_tests.py)
 
 [Back to Table of Contents](#table-of-contents)
 
