@@ -5,6 +5,8 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import base64
 import os
 
+# Hypothetical class, it will be exempted from coverage tests
+# pragma: no cover
 class User:
     # Hypothetical user class to expand the domains of the project
     def __init__(self, ID, username, password,sub_status) -> None:
@@ -24,6 +26,8 @@ class User:
         # SSO and Check for Leaks
         pass
     
+# Hypothetical class, it will be exempted from coverage tests
+# pragma: no cover
 class Services:
     # Hypothetical user class to expand the domains of the project
     def __init__(self,sso_status,backup_recovery_status,subscription_status) -> None:

@@ -16,3 +16,6 @@ def set_properties(project):
     project.depends_on("cryptography")
     project.build_depends_on("mockito")
     
+    project.set_property("coverage_break_build", True)
+    project.set_property("coverage_threshold_warn", 70)
+    project.set_property("coverage_fail_under", 70)
