@@ -29,6 +29,8 @@ This project aims to develop a Password Manager using Python for the Software De
 
 >Use and understand Git! Play with Branches and undo/revert things = go back in time!
 
+The GitHub Desktop app, GitHub plugin for VSCode and the GitHub dashboard were used to commit and merge the progress for this project, documenting changes and reverting the occasional bad implementation.
+
 &rarr; [See commit history for main](https://github.com/SpoonBear/SRHPasswordManager/commits/main)
 
 &rarr; [See commit history for dev](https://github.com/SpoonBear/SRHPasswordManager/commits/dev)
@@ -60,6 +62,10 @@ Use-Case Diagram
 ## 3. Requirements Engineering
 
 >Describe your project or any project (e.g. one related to your work or a private project) neatly using the methods of Requirements Engineering by mapping some requirements in 2 tools (!).To do this, use the most important description attributes from the script! Approximately 5-10 requirements per tool should be sufficient. Two variants should be provided = tools. A 'self-made' version and a professional = possibly commercial version, i.e. with 2 tools! Examples of 'self-made' variants: Airtable, notion.so, Trello, etc. Examples of commercial tools: Monday, Jira, Doors, ObjectIF, Xebrio, etc. (see Miro). Instead of the professional version, you can also build a tool yourself.
+
+For the Self-Made tool I used Notion.so, in which I created a kanban board to hold the cards. Inside these cards I added all the attributes related to the Requirements.
+
+For the professional tool I used Jira, in its built in board I also added the attributes related to the Requirements.
 
 Notion Overview
 
@@ -125,6 +131,8 @@ Codacy
 
 >Clean Code Development: A) At least 5 points you can show me with an explanation of why this is clean code in your code and/or what has improved & B) >>10 points on your personal CCD cheat sheet. E.g. a PDF.
 
+A)
+
 Refactoring: At the start of my project I tried writing everything in a single main function, later on I changed into objects.
 
 &rarr; [Before](https://github.com/SpoonBear/SRHPasswordManager/commit/8f7367d3e7c5fc5c1b122d1a72c3ae271dd374a5)
@@ -140,15 +148,18 @@ Error handling: For certain expected situations, I have added error handling to 
 &rarr;[Error Handling 1](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L86-L87)
 &rarr;[Error handling 2](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L131-L133)
 
-Choose descriptive and unambiguous names: I try to write my methods and variables as descriptive and unamiguous as posible, avoiding names like 'a1' or 'methd'
+Choose descriptive and unambiguous names: I try to write my methods and variables as descriptive and unambiguous as posible, avoiding names like 'a1' or 'methd'
 
 &rarr;[Method example](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L61)
 &rarr;[Variable example](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L73)
 
-Related code should appear vertically dense: To increade readability, my code is dense when the methods or functions are related; and sparse when there's logic or where classes end.
+Related code should appear vertically dense: To increase readability, my code is dense when the methods or functions are related; and sparse when there's logic or where classes end.
 
 &rarr;[Script overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/src/main/python/SRHPasswordManager.py#L73)
 
+B)
+
+&rarr;[Cheat Sheet](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/CCD/Clean%20Code%20Cheat%20Sheet.pdf)
 
 [Back to Table of Contents](#table-of-contents)
 
