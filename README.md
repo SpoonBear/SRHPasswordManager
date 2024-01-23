@@ -125,7 +125,10 @@ Codacy
 
 >Clean Code Development: A) At least 5 points you can show me with an explanation of why this is clean code in your code and/or what has improved & B) >>10 points on your personal CCD cheat sheet. E.g. a PDF.
 
-|TODO|
+Refactoring: At the start of my project I tried writing everything in a single main function, later on I changed into objects.
+
+[Before](https://github.com/SpoonBear/SRHPasswordManager/commit/8f7367d3e7c5fc5c1b122d1a72c3ae271dd374a5)
+[After](https://github.com/SpoonBear/SRHPasswordManager/commit/803a157fca506dead51e8300376dcabe53dab9bd)
 
 [Back to Table of Contents](#table-of-contents)
 
