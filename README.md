@@ -159,6 +159,10 @@ Also, it generated documentation in html from an .rst file, so that it is ready 
 
 Using PyBuilder I wrote the tests for the check_for_file(), load_and_decrypt(), encrypt_and_write() and add_entry() methods.
 
+For this, I had to create a _tests.py file in src/unittest/python.
+
+In here I specified which methods would be tested, by using the same logic and imports used in my main script.
+
 &rarr; [Unittest File](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/src/unittest/python/SRHPasswordManager_tests.py)
 
 [Back to Table of Contents](#table-of-contents)
