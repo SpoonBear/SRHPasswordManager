@@ -98,7 +98,7 @@ class Notebook:
             self.book[category]['empty'] = {'empty':'empty'} 
             print(f'Category {category} added successfully.')
 
-    def remote_entry(self):
+    def remove_entry(self):
         # Remove entry
         category = input('Enter the category of the entry you want to remove: ')
         # Check if category exists
@@ -257,7 +257,7 @@ if __name__ == "__main__":
                 if choice == '1':
                     notebook.add_entry()
                 elif choice == '2':
-                    notebook.remote_entry()
+                    notebook.remove_entry()
                 elif choice == '3':
                     notebook.add_category()
                 elif choice == '4':
