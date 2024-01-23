@@ -5,9 +5,9 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import base64
 import os
 
-# pragma: no cover
 # Hypothetical class, it will be exempted from coverage tests
-class User:
+# pragma: no cover
+class User: # pragma: no cover
     # Hypothetical user class to expand the domains of the project
     def __init__(self, ID, username, password,sub_status) -> None:
         self.ID = ID
@@ -26,9 +26,9 @@ class User:
         # SSO and Check for Leaks
         pass
     
-# pragma: no cover
 # Hypothetical class, it will be exempted from coverage tests
-class Services:
+# pragma: no cover
+class Services: # pragma: no cover
     # Hypothetical user class to expand the domains of the project
     def __init__(self,sso_status,backup_recovery_status,subscription_status) -> None:
         self.sso_status = sso_status
@@ -180,29 +180,29 @@ class Notebook:
             print('Incorrect password, please try again')
             return None
         
-    def check_for_leaks(self):
+    def check_for_leaks(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Sends storaged usernames/emails to the HaveIBeenPwned API and a security operations team,
         # where they will be checked for leaks in the clear and dark web. A report will be emailed to the user
         pass
     
-    def generate_passphrase(self):
+    def generate_passphrase(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Generates a secure and easy to remeber passphrase, e.g. 'PhoneSnowNickelPolish'
         pass
 
-    def password_strength_analysis(self):
+    def password_strength_analysis(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Analyses the stored passwords and reports the strength,
         # such as usage of lowercase, uppercase, numbers, special characters and length
         pass
 
-    def cloud_backup_and_recovery(self):
+    def cloud_backup_and_recovery(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Manages cloud saves and backups of the credentials
         pass
 
-    def ui_ux(self):
+    def ui_ux(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Should display a functioning and intuitive GUI
         pass
@@ -237,8 +237,10 @@ class Notebook:
 if __name__ == "__main__":
     notebook = Notebook({})
     print('Welcome to the Passwords Notebook\nChecking for an existing Notebook')
+
     # Check for existing Notebook.txt file containing the passwords
     notebook_exists = notebook.check_for_file()
+    
     if notebook_exists == 1:
         # Ask user for the master password password, key will be used for decryption and encryption
         key = notebook.generate_key()
@@ -274,6 +276,7 @@ if __name__ == "__main__":
                     break
                 else:
                     print("Invalid choice. Please try again.")
+    
     else:
         # File was not found, create one or exit
         print('Notebook.txt was not found\n Please choose:\n 1. Create a new Notebook\n 2. Exit')
