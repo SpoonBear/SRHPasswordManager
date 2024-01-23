@@ -126,9 +126,29 @@ Codacy
 >Clean Code Development: A) At least 5 points you can show me with an explanation of why this is clean code in your code and/or what has improved & B) >>10 points on your personal CCD cheat sheet. E.g. a PDF.
 
 Refactoring: At the start of my project I tried writing everything in a single main function, later on I changed into objects.
+&rarr; [Before](https://github.com/SpoonBear/SRHPasswordManager/commit/8f7367d3e7c5fc5c1b122d1a72c3ae271dd374a5)
 
-[Before](https://github.com/SpoonBear/SRHPasswordManager/commit/8f7367d3e7c5fc5c1b122d1a72c3ae271dd374a5)
-[After](https://github.com/SpoonBear/SRHPasswordManager/commit/803a157fca506dead51e8300376dcabe53dab9bd)
+&rarr; [After](https://github.com/SpoonBear/SRHPasswordManager/commit/803a157fca506dead51e8300376dcabe53dab9bd)
+
+Always try to explain yourself in code: In general, most of my code is explained with comments, trying to do a step-by-step guide of the methods.
+
+&rarr;[Comments 1](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L151-L162)
+&rarr;[Comments 2](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L71-L87)
+
+Error handling: For certain expected situations, I have added error handling to have more information available for the user and for debugging, and also to have graceful errors.
+
+&rarr;[Error Handling 1](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L86-L87)
+&rarr;[Error handling 2](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L131-L133)
+
+Choose descriptive and unambiguous names: I try to write my methods and variables as descriptive and unamiguous as posible, avoiding names like 'a1' or 'methd'
+
+&rarr;[Method example](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L61)
+&rarr;[Variable example](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L73)
+
+Related code should appear vertically dense: To increade readability, my code is dense when the methods or functions are related; and sparse when there's logic or where classes end.
+
+&rarr;[Script overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/src/main/python/SRHPasswordManager.py#L73)
+
 
 [Back to Table of Contents](#table-of-contents)
 
