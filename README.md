@@ -140,12 +140,12 @@ Error handling: For certain expected situations, I have added error handling to 
 &rarr;[Error Handling 1](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L86-L87)
 &rarr;[Error handling 2](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L131-L133)
 
-Choose descriptive and unambiguous names: I try to write my methods and variables as descriptive and unamiguous as posible, avoiding names like 'a1' or 'methd'
+Choose descriptive and unambiguous names: I try to write my methods and variables as descriptive and unambiguous as posible, avoiding names like 'a1' or 'methd'
 
 &rarr;[Method example](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L61)
 &rarr;[Variable example](https://github.com/SpoonBear/SRHPasswordManager/blob/d404919af1126c1147c9dc01d821ed93ca727700/src/main/python/SRHPasswordManager.py#L73)
 
-Related code should appear vertically dense: To increade readability, my code is dense when the methods or functions are related; and sparse when there's logic or where classes end.
+Related code should appear vertically dense: To increase readability, my code is dense when the methods or functions are related; and sparse when there's logic or where classes end.
 
 &rarr;[Script overview](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/src/main/python/SRHPasswordManager.py#L73)
 
