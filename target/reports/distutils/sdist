@@ -1,0 +1,34 @@
+running clean
+'build\lib' does not exist -- can't clean it
+'build\bdist.win-amd64' does not exist -- can't clean it
+'build\scripts-3.11' does not exist -- can't clean it
+running sdist
+running egg_info
+creating SRHPasswordManager.egg-info
+writing SRHPasswordManager.egg-info\PKG-INFO
+writing dependency_links to SRHPasswordManager.egg-info\dependency_links.txt
+writing namespace_packages to SRHPasswordManager.egg-info\namespace_packages.txt
+writing requirements to SRHPasswordManager.egg-info\requires.txt
+writing top-level names to SRHPasswordManager.egg-info\top_level.txt
+writing manifest file 'SRHPasswordManager.egg-info\SOURCES.txt'
+reading manifest file 'SRHPasswordManager.egg-info\SOURCES.txt'
+writing manifest file 'SRHPasswordManager.egg-info\SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating SRHPasswordManager-1.0.dev0
+creating SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+copying files to SRHPasswordManager-1.0.dev0...
+copying SRHPasswordManager.py -> SRHPasswordManager-1.0.dev0
+copying setup.py -> SRHPasswordManager-1.0.dev0
+copying SRHPasswordManager.egg-info\PKG-INFO -> SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+copying SRHPasswordManager.egg-info\SOURCES.txt -> SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+copying SRHPasswordManager.egg-info\dependency_links.txt -> SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+copying SRHPasswordManager.egg-info\namespace_packages.txt -> SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+copying SRHPasswordManager.egg-info\requires.txt -> SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+copying SRHPasswordManager.egg-info\top_level.txt -> SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+copying SRHPasswordManager.egg-info\zip-safe -> SRHPasswordManager-1.0.dev0\SRHPasswordManager.egg-info
+Writing SRHPasswordManager-1.0.dev0\setup.cfg
+creating dist
+Creating tar archive
+removing 'SRHPasswordManager-1.0.dev0' (and everything under it)

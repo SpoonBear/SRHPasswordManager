@@ -1,0 +1,16 @@
+Collecting mockito
+  Downloading mockito-1.4.0-py3-none-any.whl (30 kB)
+Collecting cryptography
+  Downloading cryptography-41.0.7-cp37-abi3-win_amd64.whl (2.7 MB)
+     ---------------------------------------- 2.7/2.7 MB 6.5 MB/s eta 0:00:00
+Collecting cffi>=1.12 (from cryptography)
+  Downloading cffi-1.16.0-cp311-cp311-win_amd64.whl (181 kB)
+     ------------------------------------- 181.5/181.5 kB 10.7 MB/s eta 0:00:00
+Collecting pycparser (from cffi>=1.12->cryptography)
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     -------------------------------------- 118.7/118.7 kB 6.8 MB/s eta 0:00:00
+Installing collected packages: pycparser, mockito, cffi, cryptography
+Successfully installed cffi-1.16.0 cryptography-41.0.7 mockito-1.4.0 pycparser-2.21
+
+[notice] A new release of pip is available: 23.1.2 -> 23.3.2
+[notice] To update, run: python.exe -m pip install --upgrade pip

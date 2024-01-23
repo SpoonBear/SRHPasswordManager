@@ -5,12 +5,14 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 import base64
 import os
 
-class User:
+# Hypothetical class, it will be exempted from coverage tests
+# pragma: no cover
+class User: # pragma: no cover
     # Hypothetical user class to expand the domains of the project
     def __init__(self, ID, username, password,sub_status) -> None:
         self.ID = ID
         self.username = username
-        self.passowrd = password
+        self.password = password
         self.sub_status = sub_status
 
     def login(self):
@@ -24,7 +26,9 @@ class User:
         # SSO and Check for Leaks
         pass
     
-class Services:
+# Hypothetical class, it will be exempted from coverage tests
+# pragma: no cover
+class Services: # pragma: no cover
     # Hypothetical user class to expand the domains of the project
     def __init__(self,sso_status,backup_recovery_status,subscription_status) -> None:
         self.sso_status = sso_status
@@ -48,8 +52,8 @@ class Services:
         pass
 
 class Notebook:
-    def __init__(self, book) -> None:
-        self.book = book
+    def __init__(self, book=None) -> None:
+        self.book = book or {}
         
     def __str__(self) -> str:
         return f'{self.book}'
@@ -176,104 +180,111 @@ class Notebook:
             print('Incorrect password, please try again')
             return None
         
-    def check_for_leaks(self):
+    def check_for_leaks(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Sends storaged usernames/emails to the HaveIBeenPwned API and a security operations team,
         # where they will be checked for leaks in the clear and dark web. A report will be emailed to the user
         pass
     
-    def generate_passphrase(self):
+    def generate_passphrase(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Generates a secure and easy to remeber passphrase, e.g. 'PhoneSnowNickelPolish'
         pass
 
-    def password_strength_analysis(self):
+    def password_strength_analysis(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Analyses the stored passwords and reports the strength,
         # such as usage of lowercase, uppercase, numbers, special characters and length
         pass
 
-    def cloud_backup_and_recovery(self):
+    def cloud_backup_and_recovery(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Manages cloud saves and backups of the credentials
         pass
 
-    def ui_ux(self):
+    def ui_ux(self): # pragma: no cover
         # Hypothetical method to expand the domains of the project
         # Should display a functioning and intuitive GUI
         pass
 
-
-nb1 = Notebook({})
-
-print('Welcome to the Passwords Notebook\nChecking for an existing Notebook')
-# Check for existing Notebook.txt file containing the passwords
-notebook_exists = nb1.check_for_file()
-if notebook_exists == 1:
-    # Ask user for the master password password, key will be used for decryption and encryption
-    key = nb1.generate_key()
-    # Load file, decrypt using key and load contents into the object
-    if nb1.load_and_decrypt(key) is not None:
-        nb1 = Notebook(nb1.load_and_decrypt(key))
-        # Continously print the dictionary and show the menu
-        while True:
-            # Print the dictionary
-            nb1.print_book()
-            # Show the menu
-            print('Menu: \n1. Add New Entry \n2. Remove Entry \n3. Add New Category \n4. Remove Category \n5. Save Notebook \n6. Change master password \n0. Exit')
-            choice = input('Enter your choice: ')
-            if choice == '1':
-                nb1.add_entry()
-            elif choice == '2':
-                nb1.remote_entry()
-            elif choice == '3':
-                nb1.add_category()
-            elif choice == '4':
-                nb1.remove_category()
-            elif choice == '5':
-                nb1.encrypt_and_write(key)
-            elif choice == '6':
-                print('Changes will be saved\n')
-                key = nb1.generate_key()
-                nb1.encrypt_and_write(key)
-            elif choice == '0':
-                # Exit the program
-                # Wipe the key for security reasons
-                key = b''
-                print('Exiting program...')
-                break
-            else:
-                print("Invalid choice. Please try again.")
-else:
-    # File was not found, create one or exit
-    print('Notebook.txt was not found\n Please choose:\n 1. Create a new Notebook\n 2. Exit')
-    choice = input('Enter your choice: ')
-    if choice == '1':
-        # Create new Notebook.txt file with mock data
-        print('Creating new Notebook')
-        nb1 = Notebook({ 
-        'Websites': {
-            'amazon.com':{ 
-            'Username': 'johndoe',
-            'Password':'pass123'
-            }
-            },
-            'Emails': {
-                'gmail': { 
-                'Username': 'johndoe@gmail.com',
-                'Password':'pass321'
+    def mock_notebook(self):
+            # Create new Notebook.txt file with mock data
+            print('Creating new Notebook')
+            notebook = Notebook({ 
+            'Websites': {
+                'amazon.com':{ 
+                'Username': 'johndoe',
+                'Password':'pass123'
                 }
+                },
+                'Emails': {
+                    'gmail': { 
+                    'Username': 'johndoe@gmail.com',
+                    'Password':'pass321'
+                    }
+                    }
                 }
-            }
-        )
-        # Ask for the password for the new Notebook
-        nb1.encrypt_and_write(nb1.generate_key())
-        print('New Notebook has been created')
-        # Wipe the key for security reasons
-        key = b''
-    elif choice == '2':
-        #Exit program
-        print('Exiting program...')
+            )
+            # Ask for the password for the new Notebook
+            notebook.encrypt_and_write(notebook.generate_key())
+            print('New Notebook has been created')
+            # Print the 'notebook' dictionary
+            notebook.print_book()
+            # Wipe the key for security reasons
+            key = b''
+
+
+if __name__ == "__main__":
+    notebook = Notebook({})
+    print('Welcome to the Passwords Notebook\nChecking for an existing Notebook')
+
+    # Check for existing Notebook.txt file containing the passwords
+    notebook_exists = notebook.check_for_file()
+    
+    if notebook_exists == 1:
+        # Ask user for the master password password, key will be used for decryption and encryption
+        key = notebook.generate_key()
+        # Load file, decrypt using key and load contents into the object
+        if notebook.load_and_decrypt(key) is not None:
+            notebook = Notebook(notebook.load_and_decrypt(key))
+            # Continously print the dictionary and show the menu
+            while True:
+                # Print the dictionary
+                notebook.print_book()
+                # Show the menu
+                print('Menu: \n1. Add New Entry \n2. Remove Entry \n3. Add New Category \n4. Remove Category \n5. Save Notebook \n6. Change master password \n0. Exit')
+                choice = input('Enter your choice: ')
+                if choice == '1':
+                    notebook.add_entry()
+                elif choice == '2':
+                    notebook.remote_entry()
+                elif choice == '3':
+                    notebook.add_category()
+                elif choice == '4':
+                    notebook.remove_category()
+                elif choice == '5':
+                    notebook.encrypt_and_write(key)
+                elif choice == '6':
+                    print('Changes will be saved\n')
+                    key = notebook.generate_key()
+                    notebook.encrypt_and_write(key)
+                elif choice == '0':
+                    # Exit the program
+                    # Wipe the key for security reasons
+                    key = b''
+                    print('Exiting program...')
+                    break
+                else:
+                    print("Invalid choice. Please try again.")
+    
     else:
-        print("Invalid choice. Please try again.")
-
+        # File was not found, create one or exit
+        print('Notebook.txt was not found\n Please choose:\n 1. Create a new Notebook\n 2. Exit')
+        choice = input('Enter your choice: ')
+        if choice == '1':
+            notebook.mock_notebook()
+        elif choice == '2':
+            #Exit program
+            print('Exiting program...')
+        else:
+            print("Invalid choice. Please try again.")
