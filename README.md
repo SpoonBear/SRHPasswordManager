@@ -133,7 +133,23 @@ Codacy
 
 >Build Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could be also disconnected from the project just to learn a build tool!) and CICD
 
-|TODO|
+For build management, I used PyBuilder, as it has similar functionalities to Maven
+
+![PyBuilder] (https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Build/PyBuilder.png)
+
+This tool supports different tasks such as coverage analysis, unittests and documentation generation.
+
+By installing PyBuilder and creating a build.py file, I described the tasks that would be run and what plugins would be used. 
+
+&rarr; (https://github.com/SpoonBear/SRHPasswordManager/blob/dev/build.py)
+
+The required coverage is 50% and the methods that are tested are check_for_file(), load_and_decrypt(), encrypt_and_write() and add_entry().
+
+![Build](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Build/Build.png)
+
+Also, it generated documentation in html from an .rst file, so that it is ready for pubishing.
+
+&rarr; (https://github.com/SpoonBear/SRHPasswordManager/tree/dev/docs/build/html)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -141,7 +157,9 @@ Codacy
 
 >Integrate some nice unit tests in your Code to be integrated into the Build
 
-|TODO|
+Using PyBuilder I wrote the tests for the check_for_file(), load_and_decrypt(), encrypt_and_write() and add_entry() methods.
+
+&rarr; (https://github.com/SpoonBear/SRHPasswordManager/blob/dev/src/unittest/python/SRHPasswordManager_tests.py)
 
 [Back to Table of Contents](#table-of-contents)
 
