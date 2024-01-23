@@ -135,7 +135,7 @@ Codacy
 
 For build management, I used PyBuilder, as it has similar functionalities to Maven
 
-![PyBuilder] (https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Build/PyBuilder.png)
+![PyBuilder](https://github.com/SpoonBear/SRHPasswordManager/blob/dev/Resources/Build/PyBuilder.png)
 
 This tool supports different tasks such as coverage analysis, unittests and documentation generation.
 
